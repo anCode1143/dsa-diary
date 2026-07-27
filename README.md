@@ -1,42 +1,17 @@
 # Neetcode 150 / Leetcode grind
 
-Logging my DSA problems one submission a time
-
-### The Plan
-
-Doing questions on the Neetcode 150 program, and other practice Qs to get an internship and offer 🤞
-
-**Focus:** From arrays, to hashing, to stacks, graphs, DP, and more....
-
-<div align="center">
-<table>
-<tr>
-<td><a href="https://leetcode.com/u/canyu3411/"><img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="LeetCode Profile"/></a></td>
-<td><a href="https://neetcode.io/roadmap"><img src="https://img.shields.io/badge/NeetCode_150-00ADD8?style=for-the-badge&logo=rocket&logoColor=white" alt="NeetCode Roadmap"/></a></td>
-<td><a href="https://www.youtube.com/playlist?list=PLMf15SjCgPm_fWEOkiR1xnMChw9hg8wAn"><img src="https://img.shields.io/badge/Playlist-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="YouTube Playlist"/></a></td>
-</tr>
-</table>
-</div>
+Documenting my DSA exercises one submission at a time.
 
 <div align="center">
 
-### Sample Video
-
-<a href="https://www.youtube.com/watch?v=ZI2z5pq0TqA">
-  <img src="https://img.youtube.com/vi/ZI2z5pq0TqA/maxresdefault.jpg" alt="Watch Video" style="width:70%;">
+<a href="https://leetcode.com/u/canyu3411/">
+  <img src="https://leetcard.jacoblin.cool/canyu3411?theme=dark&font=Karla&ext=heatmap" alt="LeetCode Stats" />
 </a>
 
+<br/>
+
+<img src="https://img.shields.io/badge/Global_Ranking-Top_5%25-FFA116?style=for-the-badge&logo=leetcode&logoColor=white" alt="Top 5% Globally"/>
+
+<sub><i>Ranked in the top 5% of LeetCode users worldwide </i></sub>
+
 </div>
-
-## Repo Structure
-
-```
-/arrays-and-hashing
-  ├── contains-duplicate.py
-  ├── valid-anagram.js
-  └── two-sum.java
-/Linked-Lists
-  └── ...
-/Graphs
-  └── ...
-```
