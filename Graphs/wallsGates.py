@@ -1,53 +1,23 @@
-from collections import deque
-from typing import List
-def islandsAndTreasure(self, grid: List[List[int]]) -> None:
-
-    # iterate through all treasures at the same time
-    ROWS, COLS = len(grid), len(grid[0])
-    treasures = []
-    for row in range(ROWS):
-        for col in range(COLS):
-            if grid[row][col] == 0:
-                treasures.append(deque([(row, col, 0)]))
-
-    def isIncludable(row, col):
-        if (row >= 0 and row < ROWS and col >= 0 and col < COLS
-            and grid[row][col] == 2147483647):
-            return True
-        else:
-            return False
-    
-    altered = True
-    # while altered, if queue:
-        # take parent length, for _ in range(parentLength):
-            # popleft = parent, if adj cells not out of bounds and equals inf, 
-                # add cells & change values
-    while altered:
-        altered = False
-        for queue in treasures:
-            if queue:
-                altered = True
-                parentLength = len(queue)
-                for _ in range(parentLength):
-                    parent = queue.popleft()
-                    if isIncludable(parent[0]+1, parent[1]):
-                        queue.append((parent[0]+1, parent[1], parent[2]+1))
-                        grid[parent[0]+1][parent[1]] = parent[2]+1
-
-                    if isIncludable(parent[0]-1, parent[1]):
-                        queue.append((parent[0]-1, parent[1], parent[2]+1))     
-                        grid[parent[0]-1][parent[1]] = parent[2]+1               
-
-                    if isIncludable(parent[0], parent[1]+1):
-                        queue.append((parent[0], parent[1]+1, parent[2]+1))
-                        grid[parent[0]][parent[1]+1] = parent[2]+1
-
-                    if isIncludable(parent[0], parent[1]-1):
-                        queue.append((parent[0], parent[1]-1, parent[2]+1))
-                        grid[parent[0]][parent[1]-1] = parent[2]+1
-
-
-
-
-
-
+class Solution:
+    def wallsAndGates(self, rooms: list[list[int]]) -> None:
+        """
+        Do not return anything, modify rooms in-place instead.
+        """
+        ROWS = len(rooms)
+        COLS = len(rooms[0])
+        queue = deque()
+        for row in range(ROWS):
+            for col in range(COLS):
+                if rooms[row][col] == 0:
+                    queue.append((row, col))
+        dist = 1
+        while queue:
+            level = len(queue)
+            for _ in range(level):
+                row, col = queue.popleft()
+                steps = [(row+1, col), (row-1, col), (row, col+1), (row, col-1)]
+                for step in steps:
+                    if 0 <= step[0] < ROWS and 0 <= step[1] < COLS and rooms[step[0]][step[1]] == 2147483647:
+                        rooms[step[0]][step[1]] = dist
+                        queue.append(step)
+            dist += 1
